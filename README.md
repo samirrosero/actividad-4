@@ -18,8 +18,9 @@ Maqueta de una página con encabezado, artículos, formulario de contacto, tabla
 ```
 actividad-4/
 ├── index.html          # Estructura de la página
-├── styles.css          # Hoja de estilos externa
 ├── README.md           # Este archivo
+├── css/
+│   └── styles.css      # Hoja de estilos externa
 └── img/
     └── placeholder.svg # Imagen de ejemplo (80 × 80) de los artículos
 ```
