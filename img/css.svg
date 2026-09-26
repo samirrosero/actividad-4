@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="340" viewBox="0 0 600 340">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#db2777"/>
+      <stop offset="1" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="340" fill="url(#bg)"/>
+  <circle cx="520" cy="60" r="100" fill="#fff" opacity=".08"/>
+  <circle cx="40" cy="300" r="80" fill="#fff" opacity=".07"/>
+  <!-- Editor de código -->
+  <rect x="90" y="60" width="250" height="220" rx="14" fill="#1e1b2e"/>
+  <g font-family="Consolas, monospace" font-size="15">
+    <text x="112" y="100" fill="#f9a8d4">.tarjeta</text>
+    <text x="186" y="100" fill="#e5e7eb">{</text>
+    <text x="130" y="130" fill="#93c5fd">display</text><text x="196" y="130" fill="#e5e7eb">: grid;</text>
+    <text x="130" y="158" fill="#93c5fd">gap</text><text x="160" y="158" fill="#e5e7eb">: 1.5rem;</text>
+    <text x="130" y="186" fill="#93c5fd">border-radius</text><text x="250" y="186" fill="#e5e7eb">:</text>
+    <text x="150" y="210" fill="#fcd34d">16px;</text>
+    <text x="130" y="238" fill="#93c5fd">color</text><text x="176" y="238" fill="#e5e7eb">: </text>
+    <rect x="192" y="226" width="14" height="14" rx="3" fill="#f472b6"/>
+    <text x="112" y="264" fill="#e5e7eb">}</text>
+  </g>
+  <!-- Resultado del diseño -->
+  <g>
+    <rect x="370" y="60" width="140" height="100" rx="14" fill="#fff"/>
+    <rect x="386" y="76" width="108" height="40" rx="8" fill="#fbcfe8"/>
+    <rect x="386" y="126" width="70" height="10" rx="5" fill="#f9a8d4"/>
+    <rect x="386" y="142" width="96" height="8" rx="4" fill="#fde68a"/>
+    <rect x="370" y="180" width="64" height="100" rx="14" fill="#fff" opacity=".9"/>
+    <rect x="446" y="180" width="64" height="100" rx="14" fill="#fff" opacity=".75"/>
+  </g>
+</svg>

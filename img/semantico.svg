@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="340" viewBox="0 0 600 340">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4f46e5"/>
+      <stop offset="1" stop-color="#7c3aed"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="340" fill="url(#bg)"/>
+  <circle cx="540" cy="40" r="90" fill="#fff" opacity=".08"/>
+  <circle cx="60" cy="320" r="70" fill="#fff" opacity=".06"/>
+  <!-- Ventana del navegador -->
+  <rect x="120" y="50" width="360" height="240" rx="14" fill="#fff"/>
+  <rect x="120" y="50" width="360" height="30" rx="14" fill="#e0e7ff"/>
+  <rect x="120" y="66" width="360" height="14" fill="#e0e7ff"/>
+  <circle cx="140" cy="65" r="5" fill="#f87171"/>
+  <circle cx="156" cy="65" r="5" fill="#fbbf24"/>
+  <circle cx="172" cy="65" r="5" fill="#34d399"/>
+  <!-- Bloques semánticos -->
+  <g font-family="Consolas, monospace" font-size="13" font-weight="700">
+    <rect x="138" y="94" width="324" height="30" rx="6" fill="#c7d2fe"/>
+    <text x="152" y="114" fill="#3730a3">&lt;header&gt;</text>
+    <rect x="138" y="132" width="90" height="100" rx="6" fill="#ddd6fe"/>
+    <text x="150" y="152" fill="#5b21b6">&lt;nav&gt;</text>
+    <rect x="236" y="132" width="226" height="100" rx="6" fill="#e0e7ff"/>
+    <text x="250" y="152" fill="#3730a3">&lt;main&gt;</text>
+    <rect x="250" y="164" width="96" height="56" rx="5" fill="#fff"/>
+    <text x="258" y="184" fill="#4f46e5" font-size="11">&lt;article&gt;</text>
+    <rect x="354" y="164" width="96" height="56" rx="5" fill="#fff"/>
+    <text x="362" y="184" fill="#4f46e5" font-size="11">&lt;article&gt;</text>
+    <rect x="138" y="240" width="324" height="34" rx="6" fill="#c7d2fe"/>
+    <text x="152" y="262" fill="#3730a3">&lt;footer&gt;</text>
+  </g>
+</svg>

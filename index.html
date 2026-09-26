@@ -3,120 +3,314 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad 4 - HTML Semántico y Accesibilidad</title>
-    <meta name="description" content="Página de ejemplo con HTML semántico, formulario, tabla y buenas prácticas de accesibilidad.">
+    <meta name="color-scheme" content="light dark">
+    <title>WebLab | HTML semántico, accesibilidad y CSS</title>
+    <meta name="description" content="WebLab: módulos de HTML semántico, accesibilidad web y CSS moderno, con formulario de contacto y tabla de puntajes.">
     <meta name="author" content="Samir Rosero Armero">
+    <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-    <!-- Enlace para saltar directamente al contenido (usuarios de teclado y lectores de pantalla) -->
+    <!-- Permite a usuarios de teclado y lectores de pantalla saltar la navegación -->
     <a class="saltar-contenido" href="#contenido-principal">Saltar al contenido principal</a>
 
-    <div class="contenedor">
+    <header class="encabezado">
+        <div class="envoltura encabezado__barra">
+            <a class="marca" href="#inicio" aria-label="WebLab, ir al inicio">
+                <img src="img/logo.svg" alt="" width="36" height="36">
+                <span>Web<strong>Lab</strong></span>
+            </a>
 
-        <header class="encabezado">
-            <a class="logo" href="#" aria-label="MyLogo, ir al inicio">MyLogo</a>
-
-            <nav aria-label="Navegación principal">
+            <nav class="menu" aria-label="Navegación principal">
                 <ul>
-                    <li><a href="#" aria-current="page">Home</a></li>
-                    <li><a href="#articulos">About</a></li>
-                    <li><a href="#contacto">Contact</a></li>
+                    <li><a href="#inicio" aria-current="page">Inicio</a></li>
+                    <li><a href="#modulos">Módulos</a></li>
+                    <li><a href="#puntajes">Puntajes</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
-        </header>
 
-        <main id="contenido-principal" tabindex="-1">
+            <a class="boton boton--primario boton--pequeno encabezado__accion" href="#contacto">Escríbenos</a>
+        </div>
+    </header>
 
-            <section id="articulos" class="articulos" aria-labelledby="titulo-articulos">
-                <h1 id="titulo-articulos" class="solo-lectores">Artículos destacados</h1>
+    <main id="contenido-principal" tabindex="-1">
 
-                <article class="tarjeta" aria-labelledby="articulo-1">
-                    <figure>
-                        <img src="img/placeholder.svg" alt="Imagen de ejemplo del primer artículo" width="300" height="300">
-                    </figure>
-                    <h2 id="articulo-1">Article Title</h2>
-                    <p>Article content goes here. This is a sample article content.</p>
-                </article>
+        <!-- ===== Portada ===== -->
+        <section id="inicio" class="portada" aria-labelledby="titulo-portada">
+            <div class="envoltura portada__contenido">
+                <p class="etiqueta">Actividad 4 · Desarrollo de Aplicaciones Web</p>
+                <h1 id="titulo-portada">
+                    Construimos una web <span class="texto-degradado">clara, accesible</span> y bien estructurada
+                </h1>
+                <p class="portada__descripcion">
+                    Una página pensada para todas las personas: HTML con significado,
+                    navegación completa con teclado y un diseño limpio con CSS moderno.
+                </p>
+                <div class="portada__acciones">
+                    <a class="boton boton--primario" href="#modulos">Explorar módulos</a>
+                    <a class="boton boton--secundario" href="#puntajes">Ver puntajes</a>
+                </div>
 
-                <article class="tarjeta" aria-labelledby="articulo-2">
-                    <figure>
-                        <img src="img/placeholder.svg" alt="Imagen de ejemplo del segundo artículo" width="300" height="300">
-                    </figure>
-                    <h2 id="articulo-2">Article Title</h2>
-                    <p>Article content goes here. This is a sample article content.</p>
-                </article>
-            </section>
+                <dl class="cifras">
+                    <div>
+                        <dt>Módulos</dt>
+                        <dd>3</dd>
+                    </div>
+                    <div>
+                        <dt>Estudiantes</dt>
+                        <dd>4</dd>
+                    </div>
+                    <div>
+                        <dt>Guía de referencia</dt>
+                        <dd><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.2</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
 
-            <section id="contacto" class="formulario" aria-labelledby="titulo-contacto">
-                <h2 id="titulo-contacto">Contact Form</h2>
+        <!-- ===== Módulos (artículos) ===== -->
+        <section id="modulos" class="seccion" aria-labelledby="titulo-modulos">
+            <div class="envoltura">
+                <header class="seccion__encabezado">
+                    <p class="etiqueta">Aprende paso a paso</p>
+                    <h2 id="titulo-modulos">Módulos del curso</h2>
+                    <p>Tres pilares para construir interfaces profesionales.</p>
+                </header>
 
-                <form action="#" method="post">
-                    <p class="nota" id="nota-obligatorios">Todos los campos son obligatorios.</p>
+                <div class="rejilla-tarjetas">
+                    <article class="tarjeta" aria-labelledby="modulo-html">
+                        <figure class="tarjeta__imagen">
+                            <img src="img/semantico.svg" alt="Esquema de una página con las etiquetas header, nav, main, article y footer" width="600" height="340" loading="lazy">
+                        </figure>
+                        <div class="tarjeta__cuerpo">
+                            <p class="chip chip--indigo">HTML</p>
+                            <h3 id="modulo-html">HTML semántico</h3>
+                            <p>Usar la etiqueta correcta para cada contenido ayuda a los buscadores y a los lectores de pantalla a entender la página.</p>
+                            <a class="enlace-flecha" href="https://developer.mozilla.org/es/docs/Glossary/Semantics" target="_blank" rel="noopener noreferrer">
+                                Leer más<span class="solo-lectores"> sobre HTML semántico (se abre en una pestaña nueva)</span>
+                            </a>
+                        </div>
+                    </article>
 
-                    <label for="nombre">Name:</label>
-                    <input type="text" id="nombre" name="nombre" autocomplete="name"
-                           required aria-required="true" aria-describedby="nota-obligatorios">
+                    <article class="tarjeta" aria-labelledby="modulo-a11y">
+                        <figure class="tarjeta__imagen">
+                            <img src="img/accesibilidad.svg" alt="Símbolo internacional de accesibilidad junto a las teclas Tab, Enter y Esc" width="600" height="340" loading="lazy">
+                        </figure>
+                        <div class="tarjeta__cuerpo">
+                            <p class="chip chip--turquesa">Accesibilidad</p>
+                            <h3 id="modulo-a11y">Web para todas las personas</h3>
+                            <p>Textos alternativos, etiquetas en formularios, buen contraste y navegación con teclado sin excepciones.</p>
+                            <a class="enlace-flecha" href="https://developer.mozilla.org/es/docs/Web/Accessibility" target="_blank" rel="noopener noreferrer">
+                                Leer más<span class="solo-lectores"> sobre accesibilidad web (se abre en una pestaña nueva)</span>
+                            </a>
+                        </div>
+                    </article>
 
-                    <label for="correo">Email:</label>
-                    <input type="email" id="correo" name="correo" autocomplete="email"
-                           required aria-required="true" aria-describedby="ayuda-correo">
-                    <small id="ayuda-correo" class="solo-lectores">Formato: nombre@ejemplo.com</small>
+                    <article class="tarjeta" aria-labelledby="modulo-css">
+                        <figure class="tarjeta__imagen">
+                            <img src="img/css.svg" alt="Editor con código CSS al lado de las tarjetas que genera" width="600" height="340" loading="lazy">
+                        </figure>
+                        <div class="tarjeta__cuerpo">
+                            <p class="chip chip--rosa">CSS</p>
+                            <h3 id="modulo-css">Diseño con CSS moderno</h3>
+                            <p>Variables, Grid, Flexbox y modo oscuro automático para interfaces consistentes en cualquier pantalla.</p>
+                            <a class="enlace-flecha" href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank" rel="noopener noreferrer">
+                                Leer más<span class="solo-lectores"> sobre CSS (se abre en una pestaña nueva)</span>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
 
-                    <label for="mensaje">Message:</label>
-                    <textarea id="mensaje" name="mensaje" rows="3"
-                              required aria-required="true" aria-describedby="nota-obligatorios"></textarea>
+        <!-- ===== Tabla de puntajes ===== -->
+        <section id="puntajes" class="seccion seccion--alterna" aria-labelledby="titulo-puntajes">
+            <div class="envoltura">
+                <header class="seccion__encabezado">
+                    <p class="etiqueta">Resultados</p>
+                    <h2 id="titulo-puntajes">Puntajes de estudiantes</h2>
+                    <p>Cada módulo se califica sobre 100 puntos. Se aprueba con 240 puntos o más.</p>
+                </header>
 
-                    <button type="submit">Submit</button>
+                <!-- Región con scroll accesible por teclado en pantallas pequeñas -->
+                <div class="tabla-contenedor" role="region" aria-labelledby="titulo-puntajes" tabindex="0">
+                    <table class="tabla">
+                        <caption class="solo-lectores">Puntajes por módulo, total y estado de cada estudiante, con el promedio del grupo al final</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Estudiante</th>
+                                <th scope="col">HTML</th>
+                                <th scope="col">CSS</th>
+                                <th scope="col">Accesibilidad</th>
+                                <th scope="col">Total</th>
+                                <th scope="col">Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Ana Gómez</th>
+                                <td>92</td>
+                                <td>88</td>
+                                <td>95</td>
+                                <td><strong>275</strong></td>
+                                <td><span class="estado estado--aprobado">Aprobado</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Carlos Pérez</th>
+                                <td>80</td>
+                                <td>90</td>
+                                <td>85</td>
+                                <td><strong>255</strong></td>
+                                <td><span class="estado estado--aprobado">Aprobado</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Laura Díaz</th>
+                                <td>85</td>
+                                <td>95</td>
+                                <td>90</td>
+                                <td><strong>270</strong></td>
+                                <td><span class="estado estado--aprobado">Aprobado</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Mateo Ruiz</th>
+                                <td>70</td>
+                                <td>65</td>
+                                <td>72</td>
+                                <td><strong>207</strong></td>
+                                <td><span class="estado estado--progreso">En progreso</span></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th scope="row">Promedio</th>
+                                <td>81,8</td>
+                                <td>84,5</td>
+                                <td>85,5</td>
+                                <td>251,8</td>
+                                <td>—</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Contacto (formulario) ===== -->
+        <section id="contacto" class="seccion" aria-labelledby="titulo-contacto">
+            <div class="envoltura contacto">
+                <div class="contacto__info">
+                    <p class="etiqueta">Contacto</p>
+                    <h2 id="titulo-contacto">¿Hablamos?</h2>
+                    <p>Escríbenos tus dudas sobre los módulos o propuestas de proyecto. Respondemos en menos de 24 horas hábiles.</p>
+
+                    <ul class="lista-contacto">
+                        <li>
+                            <span class="lista-contacto__icono" aria-hidden="true">✉</span>
+                            <a href="mailto:info@weblab.dev">info@weblab.dev</a>
+                        </li>
+                        <li>
+                            <span class="lista-contacto__icono" aria-hidden="true">🕑</span>
+                            Lunes a viernes, 8:00 a. m. – 6:00 p. m.
+                        </li>
+                        <li>
+                            <span class="lista-contacto__icono" aria-hidden="true">📍</span>
+                            Cali, Colombia
+                        </li>
+                    </ul>
+                </div>
+
+                <form class="formulario" action="#" method="post" aria-describedby="nota-obligatorios">
+                    <fieldset>
+                        <legend>Envíanos un mensaje</legend>
+                        <p id="nota-obligatorios" class="formulario__nota">
+                            Los campos marcados con <span aria-hidden="true">*</span><span class="solo-lectores">asterisco</span> son obligatorios.
+                        </p>
+
+                        <div class="formulario__fila">
+                            <div class="campo">
+                                <label for="nombre">Nombre completo <span class="requerido" aria-hidden="true">*</span></label>
+                                <input type="text" id="nombre" name="nombre" autocomplete="name" required placeholder="Ej.: Ana Gómez">
+                            </div>
+
+                            <div class="campo">
+                                <label for="correo">Correo electrónico <span class="requerido" aria-hidden="true">*</span></label>
+                                <input type="email" id="correo" name="correo" autocomplete="email" required
+                                       placeholder="nombre@ejemplo.com" aria-describedby="ayuda-correo">
+                                <small id="ayuda-correo" class="campo__ayuda">Solo lo usaremos para responderte.</small>
+                            </div>
+                        </div>
+
+                        <div class="campo">
+                            <label for="asunto">Asunto</label>
+                            <select id="asunto" name="asunto">
+                                <option value="duda">Duda sobre un módulo</option>
+                                <option value="proyecto">Propuesta de proyecto</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="campo">
+                            <label for="mensaje">Mensaje <span class="requerido" aria-hidden="true">*</span></label>
+                            <textarea id="mensaje" name="mensaje" rows="5" required minlength="10"
+                                      placeholder="Cuéntanos en qué te podemos ayudar" aria-describedby="ayuda-mensaje"></textarea>
+                            <small id="ayuda-mensaje" class="campo__ayuda">Mínimo 10 caracteres.</small>
+                        </div>
+
+                        <div class="campo campo--casilla">
+                            <input type="checkbox" id="acepto" name="acepto" required>
+                            <label for="acepto">Acepto el tratamiento de mis datos personales <span class="requerido" aria-hidden="true">*</span></label>
+                        </div>
+
+                        <div class="formulario__acciones">
+                            <button type="reset" class="boton boton--secundario">Limpiar</button>
+                            <button type="submit" class="boton boton--primario">Enviar mensaje</button>
+                        </div>
+                    </fieldset>
                 </form>
-            </section>
+            </div>
+        </section>
 
-            <section class="puntajes" aria-labelledby="titulo-puntajes">
-                <h2 id="titulo-puntajes">Student Scores</h2>
+    </main>
 
-                <table>
-                    <caption class="solo-lectores">Puntajes de estudiantes en HTML y CSS, con el total por estudiante y el total general</caption>
-                    <thead>
-                        <tr>
-                            <th scope="col">Name</th>
-                            <th scope="col">HTML</th>
-                            <th scope="col">CSS</th>
-                            <th scope="col">Total</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">John</th>
-                            <td>80</td>
-                            <td>90</td>
-                            <td>170</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Jane</th>
-                            <td>85</td>
-                            <td>95</td>
-                            <td>180</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th scope="row" colspan="3">Total</th>
-                            <td>350</td>
-                        </tr>
-                    </tfoot>
-                </table>
-            </section>
+    <footer class="pie">
+        <div class="envoltura pie__rejilla">
+            <div>
+                <a class="marca marca--pie" href="#inicio" aria-label="WebLab, volver al inicio">
+                    <img src="img/logo.svg" alt="" width="32" height="32">
+                    <span>Web<strong>Lab</strong></span>
+                </a>
+                <p>Proyecto académico de HTML semántico, accesibilidad y CSS.</p>
+            </div>
 
-        </main>
+            <nav aria-label="Navegación del pie de página">
+                <h2 class="pie__titulo">Secciones</h2>
+                <ul>
+                    <li><a href="#modulos">Módulos</a></li>
+                    <li><a href="#puntajes">Puntajes</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
 
-        <footer class="pie">
-            <address>
-                Contact us at: <a href="mailto:info@example.com">info@example.com</a>
-            </address>
-        </footer>
+            <div>
+                <h2 class="pie__titulo">Contacto</h2>
+                <address>
+                    <a href="mailto:info@weblab.dev">info@weblab.dev</a><br>
+                    <a href="https://github.com/samirrosero/actividad-4" target="_blank" rel="noopener noreferrer">
+                        Repositorio en GitHub<span class="solo-lectores"> (se abre en una pestaña nueva)</span>
+                    </a>
+                </address>
+            </div>
+        </div>
 
-    </div>
+        <div class="envoltura pie__legal">
+            <p>&copy; <time datetime="2026">2026</time> Samir Rosero Armero. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
