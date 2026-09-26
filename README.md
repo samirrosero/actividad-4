@@ -2,11 +2,35 @@
 
 Maqueta de una página con encabezado, artículos, formulario de contacto, tabla de puntajes y pie de página, basada en la plantilla entregada.
 
-## Archivos
+- **Autor:** Samir Rosero Armero
+- **Curso:** Desarrollo de Aplicaciones Web
+- **Repositorio:** [github.com/samirrosero/actividad-4](https://github.com/samirrosero/actividad-4)
 
-- `index.html`: estructura de la página.
-- `styles.css`: hoja de estilos externa.
-- `img/placeholder.svg`: imagen de ejemplo (80 × 80) usada en los artículos.
+## Requisitos de la actividad
+
+- [x] Aplicar HTML semántico.
+- [x] Usar etiquetas de formulario, imagen, botones, tablas y demás etiquetas necesarias.
+- [x] Investigar y poner en práctica la accesibilidad.
+- [x] Agregar CSS externo básico que se acerque al diseño de la imagen.
+
+## Estructura del proyecto
+
+```
+actividad-4/
+├── index.html          # Estructura de la página
+├── styles.css          # Hoja de estilos externa
+├── README.md           # Este archivo
+└── img/
+    └── placeholder.svg # Imagen de ejemplo (80 × 80) de los artículos
+```
+
+## Secciones de la página
+
+1. **Encabezado:** logo y menú de navegación (Home, About, Contact).
+2. **Artículos:** dos tarjetas con imagen, título y texto.
+3. **Formulario de contacto:** nombre, correo, mensaje y botón de envío.
+4. **Tabla de puntajes:** notas de HTML y CSS por estudiante, con fila de total.
+5. **Pie de página:** correo de contacto.
 
 ## HTML semántico
 
@@ -34,4 +58,14 @@ Maqueta de una página con encabezado, artículos, formulario de contacto, tabla
 
 ## Cómo verlo
 
-Abrir `index.html` en el navegador.
+1. Clonar el repositorio:
+   ```bash
+   git clone https://github.com/samirrosero/actividad-4.git
+   ```
+2. Abrir `index.html` en el navegador.
+
+## Probar la accesibilidad
+
+- Navegar la página solo con **Tab** y **Shift + Tab**: el primer Tab muestra el enlace "Saltar al contenido principal" y cada elemento enfocado se resalta.
+- Usar un lector de pantalla (NVDA en Windows o Narrador con `Ctrl + Win + Enter`) para escuchar las etiquetas del formulario y los encabezados de la tabla.
+- Revisar con la pestaña **Lighthouse** de las herramientas de desarrollador de Chrome (categoría *Accessibility*).
