@@ -1,6 +1,6 @@
 # Actividad 4 - HTML Semántico, Accesibilidad y CSS
 
-**WebLab** es una página de un curso de desarrollo web con portada, módulos, tabla de puntajes, formulario de contacto y pie de página. Toma como punto de partida la plantilla entregada y la lleva a un diseño moderno, responsive y accesible.
+**WebLab** es una página de un curso de desarrollo web con presentación, módulos, tabla de puntajes, formulario de contacto y pie de página. Toma como base la plantilla entregada (encabezado y pie oscuros, contenido claro) y la amplía con un diseño sencillo, responsive y accesible.
 
 - **Autor:** Samir Rosero Armero
 - **Curso:** Desarrollo de Aplicaciones Web
@@ -30,18 +30,18 @@ actividad-4/
 
 ## Secciones de la página
 
-1. **Encabezado fijo:** logo, menú de navegación y botón de acción.
-2. **Portada:** título principal, botones hacia las secciones y cifras del curso.
+1. **Encabezado fijo:** logo y menú de navegación.
+2. **Presentación:** título principal y botones hacia las secciones.
 3. **Módulos:** tres tarjetas (`article`) con imagen, categoría, título, descripción y enlace a MDN.
 4. **Puntajes:** tabla con la nota por módulo, total, estado de cada estudiante y promedio del grupo.
 5. **Contacto:** datos de contacto y formulario con validación nativa.
-6. **Pie de página:** navegación secundaria, contacto y derechos de autor.
+6. **Pie de página:** navegación secundaria, correo de contacto y derechos de autor.
 
 ## HTML semántico
 
 - `header`, `nav`, `main`, `section`, `article`, `figure`, `address` y `footer`.
-- Lista de definición (`dl`, `dt`, `dd`) para las cifras de la portada.
-- `abbr`, `time`, `strong` y `small` donde aportan significado.
+- Lista de definición (`dl`, `dt`, `dd`) para los datos de contacto.
+- `time`, `strong` y `small` donde aportan significado.
 - Jerarquía de encabezados ordenada: un solo `h1`, luego `h2` por sección y `h3` en las tarjetas.
 
 ## Etiquetas usadas
@@ -70,20 +70,18 @@ actividad-4/
   - Está dentro de una región con scroll que se puede usar con teclado (`role="region"`, `tabindex="0"`).
   - El estado de cada estudiante se indica con texto, no solo con color.
 - Indicador de foco visible (`:focus-visible`) en todos los elementos interactivos.
-- Contraste de colores pensado para cumplir WCAG AA, en modo claro y oscuro.
+- Contraste de colores pensado para cumplir WCAG AA.
 - Objetivos táctiles de al menos 44 px en botones.
-- Respeta las preferencias del sistema:
-  - `prefers-color-scheme`: modo oscuro automático.
-  - `prefers-reduced-motion`: desactiva las animaciones.
-  - `prefers-contrast`: aumenta el contraste.
+- Respeta la preferencia del sistema de reducir movimiento (`prefers-reduced-motion`).
 
 ## CSS
 
 - Variables (`:root`) para colores, radios, sombras y tiempos de transición.
-- Layout con **Grid** y **Flexbox**, y tipografía fluida con `clamp()`.
-- Nomenclatura de clases tipo BEM en español (`tarjeta__cuerpo`, `boton--primario`).
-- Diseño responsive con puntos de quiebre en 860 px, 720 px y 560 px.
-- Fuente [Inter](https://fonts.google.com/specimen/Inter) desde Google Fonts.
+- Paleta sobria: gris oscuro para encabezado y pie, fondo claro y un azul como color principal.
+- Layout con **Grid** y **Flexbox**.
+- Nombres de clases en español con estilo BEM (`tarjeta__cuerpo`, `boton--primario`).
+- Diseño responsive con puntos de quiebre en 800 px y 560 px.
+- Fuentes del sistema, sin dependencias externas.
 
 ## Cómo verlo
 
@@ -98,4 +96,4 @@ actividad-4/
 - Navegar la página solo con **Tab** y **Shift + Tab**: el primer Tab muestra el enlace "Saltar al contenido principal" y cada elemento enfocado se resalta.
 - Usar un lector de pantalla (NVDA en Windows o Narrador con `Ctrl + Win + Enter`) para escuchar las etiquetas del formulario y los encabezados de la tabla.
 - Revisar con la pestaña **Lighthouse** de las herramientas de desarrollador de Chrome (categoría *Accessibility*).
-- Cambiar el sistema a modo oscuro o activar "reducir movimiento" para ver cómo se adapta la página.
+- Reducir el ancho de la ventana para ver cómo se adapta la página al celular.

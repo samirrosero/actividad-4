@@ -3,14 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="light dark">
     <title>WebLab | HTML semántico, accesibilidad y CSS</title>
-    <meta name="description" content="WebLab: módulos de HTML semántico, accesibilidad web y CSS moderno, con formulario de contacto y tabla de puntajes.">
+    <meta name="description" content="WebLab: módulos de HTML semántico, accesibilidad web y CSS, con tabla de puntajes y formulario de contacto.">
     <meta name="author" content="Samir Rosero Armero">
     <link rel="icon" href="img/logo.svg" type="image/svg+xml">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -21,8 +17,8 @@
     <header class="encabezado">
         <div class="envoltura encabezado__barra">
             <a class="marca" href="#inicio" aria-label="WebLab, ir al inicio">
-                <img src="img/logo.svg" alt="" width="36" height="36">
-                <span>Web<strong>Lab</strong></span>
+                <img src="img/logo.svg" alt="" width="32" height="32">
+                <span>WebLab</span>
             </a>
 
             <nav class="menu" aria-label="Navegación principal">
@@ -33,54 +29,32 @@
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
-
-            <a class="boton boton--primario boton--pequeno encabezado__accion" href="#contacto">Escríbenos</a>
         </div>
     </header>
 
     <main id="contenido-principal" tabindex="-1">
 
-        <!-- ===== Portada ===== -->
-        <section id="inicio" class="portada" aria-labelledby="titulo-portada">
-            <div class="envoltura portada__contenido">
-                <p class="etiqueta">Actividad 4 · Desarrollo de Aplicaciones Web</p>
-                <h1 id="titulo-portada">
-                    Construimos una web <span class="texto-degradado">clara, accesible</span> y bien estructurada
-                </h1>
-                <p class="portada__descripcion">
-                    Una página pensada para todas las personas: HTML con significado,
-                    navegación completa con teclado y un diseño limpio con CSS moderno.
+        <!-- ===== Presentación ===== -->
+        <section id="inicio" class="presentacion" aria-labelledby="titulo-inicio">
+            <div class="envoltura">
+                <h1 id="titulo-inicio">Desarrollo web con buenas bases</h1>
+                <p>
+                    Material de apoyo sobre HTML semántico, accesibilidad y CSS.
+                    Aquí encuentras los módulos del curso, los puntajes del grupo
+                    y un formulario para enviarnos tus dudas.
                 </p>
-                <div class="portada__acciones">
-                    <a class="boton boton--primario" href="#modulos">Explorar módulos</a>
-                    <a class="boton boton--secundario" href="#puntajes">Ver puntajes</a>
+                <div class="presentacion__acciones">
+                    <a class="boton boton--primario" href="#modulos">Ver módulos</a>
+                    <a class="boton boton--secundario" href="#contacto">Contactar</a>
                 </div>
-
-                <dl class="cifras">
-                    <div>
-                        <dt>Módulos</dt>
-                        <dd>3</dd>
-                    </div>
-                    <div>
-                        <dt>Estudiantes</dt>
-                        <dd>4</dd>
-                    </div>
-                    <div>
-                        <dt>Guía de referencia</dt>
-                        <dd><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> 2.2</dd>
-                    </div>
-                </dl>
             </div>
         </section>
 
         <!-- ===== Módulos (artículos) ===== -->
         <section id="modulos" class="seccion" aria-labelledby="titulo-modulos">
             <div class="envoltura">
-                <header class="seccion__encabezado">
-                    <p class="etiqueta">Aprende paso a paso</p>
-                    <h2 id="titulo-modulos">Módulos del curso</h2>
-                    <p>Tres pilares para construir interfaces profesionales.</p>
-                </header>
+                <h2 id="titulo-modulos">Módulos del curso</h2>
+                <p class="seccion__descripcion">Tres temas para construir páginas bien hechas.</p>
 
                 <div class="rejilla-tarjetas">
                     <article class="tarjeta" aria-labelledby="modulo-html">
@@ -88,10 +62,10 @@
                             <img src="img/semantico.svg" alt="Esquema de una página con las etiquetas header, nav, main, article y footer" width="600" height="340" loading="lazy">
                         </figure>
                         <div class="tarjeta__cuerpo">
-                            <p class="chip chip--indigo">HTML</p>
+                            <p class="tarjeta__categoria">Módulo 1</p>
                             <h3 id="modulo-html">HTML semántico</h3>
                             <p>Usar la etiqueta correcta para cada contenido ayuda a los buscadores y a los lectores de pantalla a entender la página.</p>
-                            <a class="enlace-flecha" href="https://developer.mozilla.org/es/docs/Glossary/Semantics" target="_blank" rel="noopener noreferrer">
+                            <a href="https://developer.mozilla.org/es/docs/Glossary/Semantics" target="_blank" rel="noopener noreferrer">
                                 Leer más<span class="solo-lectores"> sobre HTML semántico (se abre en una pestaña nueva)</span>
                             </a>
                         </div>
@@ -102,10 +76,10 @@
                             <img src="img/accesibilidad.svg" alt="Símbolo internacional de accesibilidad junto a las teclas Tab, Enter y Esc" width="600" height="340" loading="lazy">
                         </figure>
                         <div class="tarjeta__cuerpo">
-                            <p class="chip chip--turquesa">Accesibilidad</p>
-                            <h3 id="modulo-a11y">Web para todas las personas</h3>
-                            <p>Textos alternativos, etiquetas en formularios, buen contraste y navegación con teclado sin excepciones.</p>
-                            <a class="enlace-flecha" href="https://developer.mozilla.org/es/docs/Web/Accessibility" target="_blank" rel="noopener noreferrer">
+                            <p class="tarjeta__categoria">Módulo 2</p>
+                            <h3 id="modulo-a11y">Accesibilidad web</h3>
+                            <p>Textos alternativos, etiquetas en los formularios, buen contraste y navegación completa con teclado.</p>
+                            <a href="https://developer.mozilla.org/es/docs/Web/Accessibility" target="_blank" rel="noopener noreferrer">
                                 Leer más<span class="solo-lectores"> sobre accesibilidad web (se abre en una pestaña nueva)</span>
                             </a>
                         </div>
@@ -116,10 +90,10 @@
                             <img src="img/css.svg" alt="Editor con código CSS al lado de las tarjetas que genera" width="600" height="340" loading="lazy">
                         </figure>
                         <div class="tarjeta__cuerpo">
-                            <p class="chip chip--rosa">CSS</p>
-                            <h3 id="modulo-css">Diseño con CSS moderno</h3>
-                            <p>Variables, Grid, Flexbox y modo oscuro automático para interfaces consistentes en cualquier pantalla.</p>
-                            <a class="enlace-flecha" href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank" rel="noopener noreferrer">
+                            <p class="tarjeta__categoria">Módulo 3</p>
+                            <h3 id="modulo-css">Estilos con CSS</h3>
+                            <p>Variables, Grid y Flexbox para crear diseños ordenados que se adaptan a cualquier pantalla.</p>
+                            <a href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank" rel="noopener noreferrer">
                                 Leer más<span class="solo-lectores"> sobre CSS (se abre en una pestaña nueva)</span>
                             </a>
                         </div>
@@ -131,11 +105,8 @@
         <!-- ===== Tabla de puntajes ===== -->
         <section id="puntajes" class="seccion seccion--alterna" aria-labelledby="titulo-puntajes">
             <div class="envoltura">
-                <header class="seccion__encabezado">
-                    <p class="etiqueta">Resultados</p>
-                    <h2 id="titulo-puntajes">Puntajes de estudiantes</h2>
-                    <p>Cada módulo se califica sobre 100 puntos. Se aprueba con 240 puntos o más.</p>
-                </header>
+                <h2 id="titulo-puntajes">Puntajes de estudiantes</h2>
+                <p class="seccion__descripcion">Cada módulo se califica sobre 100 puntos. Se aprueba con 240 puntos o más.</p>
 
                 <!-- Región con scroll accesible por teclado en pantallas pequeñas -->
                 <div class="tabla-contenedor" role="region" aria-labelledby="titulo-puntajes" tabindex="0">
@@ -182,7 +153,7 @@
                                 <td>65</td>
                                 <td>72</td>
                                 <td><strong>207</strong></td>
-                                <td><span class="estado estado--progreso">En progreso</span></td>
+                                <td><span class="estado estado--pendiente">En progreso</span></td>
                             </tr>
                         </tbody>
                         <tfoot>
@@ -204,29 +175,22 @@
         <section id="contacto" class="seccion" aria-labelledby="titulo-contacto">
             <div class="envoltura contacto">
                 <div class="contacto__info">
-                    <p class="etiqueta">Contacto</p>
-                    <h2 id="titulo-contacto">¿Hablamos?</h2>
+                    <h2 id="titulo-contacto">Contacto</h2>
                     <p>Escríbenos tus dudas sobre los módulos o propuestas de proyecto. Respondemos en menos de 24 horas hábiles.</p>
 
-                    <ul class="lista-contacto">
-                        <li>
-                            <span class="lista-contacto__icono" aria-hidden="true">✉</span>
-                            <a href="mailto:info@weblab.dev">info@weblab.dev</a>
-                        </li>
-                        <li>
-                            <span class="lista-contacto__icono" aria-hidden="true">🕑</span>
-                            Lunes a viernes, 8:00 a. m. – 6:00 p. m.
-                        </li>
-                        <li>
-                            <span class="lista-contacto__icono" aria-hidden="true">📍</span>
-                            Cali, Colombia
-                        </li>
-                    </ul>
+                    <dl class="datos-contacto">
+                        <dt>Correo</dt>
+                        <dd><a href="mailto:info@weblab.dev">info@weblab.dev</a></dd>
+                        <dt>Horario</dt>
+                        <dd>Lunes a viernes, 8:00 a. m. – 6:00 p. m.</dd>
+                        <dt>Ubicación</dt>
+                        <dd>Cali, Colombia</dd>
+                    </dl>
                 </div>
 
-                <form class="formulario" action="#" method="post" aria-describedby="nota-obligatorios">
+                <form class="formulario" action="#" method="post">
                     <fieldset>
-                        <legend>Envíanos un mensaje</legend>
+                        <legend>Formulario de contacto</legend>
                         <p id="nota-obligatorios" class="formulario__nota">
                             Los campos marcados con <span aria-hidden="true">*</span><span class="solo-lectores">asterisco</span> son obligatorios.
                         </p>
@@ -234,14 +198,13 @@
                         <div class="formulario__fila">
                             <div class="campo">
                                 <label for="nombre">Nombre completo <span class="requerido" aria-hidden="true">*</span></label>
-                                <input type="text" id="nombre" name="nombre" autocomplete="name" required placeholder="Ej.: Ana Gómez">
+                                <input type="text" id="nombre" name="nombre" autocomplete="name" required aria-describedby="nota-obligatorios">
                             </div>
 
                             <div class="campo">
                                 <label for="correo">Correo electrónico <span class="requerido" aria-hidden="true">*</span></label>
-                                <input type="email" id="correo" name="correo" autocomplete="email" required
-                                       placeholder="nombre@ejemplo.com" aria-describedby="ayuda-correo">
-                                <small id="ayuda-correo" class="campo__ayuda">Solo lo usaremos para responderte.</small>
+                                <input type="email" id="correo" name="correo" autocomplete="email" required aria-describedby="ayuda-correo">
+                                <small id="ayuda-correo" class="campo__ayuda">Ejemplo: nombre@correo.com</small>
                             </div>
                         </div>
 
@@ -256,8 +219,7 @@
 
                         <div class="campo">
                             <label for="mensaje">Mensaje <span class="requerido" aria-hidden="true">*</span></label>
-                            <textarea id="mensaje" name="mensaje" rows="5" required minlength="10"
-                                      placeholder="Cuéntanos en qué te podemos ayudar" aria-describedby="ayuda-mensaje"></textarea>
+                            <textarea id="mensaje" name="mensaje" rows="5" required minlength="10" aria-describedby="ayuda-mensaje"></textarea>
                             <small id="ayuda-mensaje" class="campo__ayuda">Mínimo 10 caracteres.</small>
                         </div>
 
@@ -267,8 +229,8 @@
                         </div>
 
                         <div class="formulario__acciones">
+                            <button type="submit" class="boton boton--primario">Enviar</button>
                             <button type="reset" class="boton boton--secundario">Limpiar</button>
-                            <button type="submit" class="boton boton--primario">Enviar mensaje</button>
                         </div>
                     </fieldset>
                 </form>
@@ -278,37 +240,23 @@
     </main>
 
     <footer class="pie">
-        <div class="envoltura pie__rejilla">
-            <div>
-                <a class="marca marca--pie" href="#inicio" aria-label="WebLab, volver al inicio">
-                    <img src="img/logo.svg" alt="" width="32" height="32">
-                    <span>Web<strong>Lab</strong></span>
-                </a>
-                <p>Proyecto académico de HTML semántico, accesibilidad y CSS.</p>
-            </div>
-
+        <div class="envoltura pie__contenido">
             <nav aria-label="Navegación del pie de página">
-                <h2 class="pie__titulo">Secciones</h2>
                 <ul>
                     <li><a href="#modulos">Módulos</a></li>
                     <li><a href="#puntajes">Puntajes</a></li>
                     <li><a href="#contacto">Contacto</a></li>
+                    <li>
+                        <a href="https://github.com/samirrosero/actividad-4" target="_blank" rel="noopener noreferrer">
+                            GitHub<span class="solo-lectores"> (se abre en una pestaña nueva)</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
-
-            <div>
-                <h2 class="pie__titulo">Contacto</h2>
-                <address>
-                    <a href="mailto:info@weblab.dev">info@weblab.dev</a><br>
-                    <a href="https://github.com/samirrosero/actividad-4" target="_blank" rel="noopener noreferrer">
-                        Repositorio en GitHub<span class="solo-lectores"> (se abre en una pestaña nueva)</span>
-                    </a>
-                </address>
-            </div>
-        </div>
-
-        <div class="envoltura pie__legal">
-            <p>&copy; <time datetime="2026">2026</time> Samir Rosero Armero. Todos los derechos reservados.</p>
+            <address>
+                Contáctanos en: <a href="mailto:info@weblab.dev">info@weblab.dev</a>
+            </address>
+            <p><small>&copy; <time datetime="2026">2026</time> Samir Rosero Armero.</small></p>
         </div>
     </footer>
 
