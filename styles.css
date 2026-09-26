@@ -1,0 +1,274 @@
+/* ---------- Variables ---------- */
+
+:root {
+    --color-fondo-pagina: #1f2426;
+    --color-oscuro: #333333;
+    --color-blanco: #ffffff;
+    --color-texto: #222222;
+    --color-texto-suave: #555555;
+    --color-borde: #dddddd;
+    --color-gris-claro: #f2f2f2;
+    --color-foco: #1a73e8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #1b2a30 0%, var(--color-fondo-pagina) 50%, #232a1f 100%);
+    color: var(--color-texto);
+    line-height: 1.5;
+}
+
+/* ---------- Accesibilidad ---------- */
+
+/* Oculta visualmente, pero sigue disponible para lectores de pantalla */
+.solo-lectores {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.saltar-contenido {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    padding: 0.5rem 1rem;
+    background-color: var(--color-blanco);
+    color: var(--color-oscuro);
+    font-weight: bold;
+    z-index: 100;
+}
+
+.saltar-contenido:focus {
+    top: 0;
+}
+
+/* Indicador de foco visible para navegación con teclado */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--color-foco);
+    outline-offset: 2px;
+}
+
+main:focus {
+    outline: none;
+}
+
+/* ---------- Contenedor ---------- */
+
+.contenedor {
+    max-width: 850px;
+    margin: 0 auto;
+    background-color: var(--color-blanco);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------- Encabezado ---------- */
+
+.encabezado {
+    background-color: var(--color-oscuro);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1.8rem 3.5rem;
+}
+
+.logo {
+    color: var(--color-blanco);
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.encabezado nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.encabezado nav a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.encabezado nav a:hover,
+.encabezado nav a[aria-current="page"] {
+    text-decoration: underline;
+}
+
+/* ---------- Contenido principal ---------- */
+
+main {
+    flex: 1;
+    padding: 3.5rem 3.5rem 5rem;
+}
+
+main h2 {
+    font-size: 1.3rem;
+    margin: 0 0 1.5rem 0;
+}
+
+/* ---------- Artículos ---------- */
+
+.articulos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    padding: 0 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.tarjeta {
+    border: 1px solid #eeeeee;
+    padding: 1rem 1rem 1.5rem;
+}
+
+.tarjeta figure {
+    margin: 0 0 1.5rem 0;
+}
+
+.tarjeta img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.tarjeta h2 {
+    font-size: 1.15rem;
+    margin: 0 0 1rem 0;
+}
+
+.tarjeta p {
+    font-size: 0.85rem;
+    color: var(--color-texto-suave);
+    margin: 0;
+}
+
+/* ---------- Formulario ---------- */
+
+.formulario {
+    margin-bottom: 3rem;
+}
+
+.formulario .nota {
+    font-size: 0.8rem;
+    color: var(--color-texto-suave);
+    margin: 0 0 0.5rem 0;
+}
+
+.formulario label {
+    display: block;
+    font-size: 0.85rem;
+    margin: 0.8rem 0 0.5rem 0;
+}
+
+.formulario input,
+.formulario textarea {
+    display: block;
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #aaaaaa;
+    border-radius: 3px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.formulario textarea {
+    resize: vertical;
+}
+
+.formulario button {
+    margin-top: 1rem;
+    padding: 0.6rem 2.5rem;
+    background-color: var(--color-gris-claro);
+    border: 1px solid #aaaaaa;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.formulario button:hover {
+    background-color: var(--color-borde);
+}
+
+/* ---------- Tabla ---------- */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+th,
+td {
+    border: 1px solid #e5e5e5;
+    padding: 1.1rem 0.5rem;
+}
+
+thead th {
+    background-color: var(--color-gris-claro);
+    font-weight: bold;
+}
+
+tbody th {
+    font-weight: normal;
+}
+
+tfoot th,
+tfoot td {
+    font-weight: bold;
+}
+
+/* ---------- Pie de página ---------- */
+
+.pie {
+    background-color: var(--color-oscuro);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 2.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+.pie address {
+    font-style: normal;
+}
+
+.pie a {
+    color: var(--color-blanco);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 640px) {
+    .encabezado,
+    main {
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+    }
+
+    .articulos {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0;
+    }
+}
